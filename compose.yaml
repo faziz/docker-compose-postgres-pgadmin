@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres
+    image: postgres:15.17-trixie
     hostname: postgreshost
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
