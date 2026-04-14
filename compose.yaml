@@ -32,10 +32,6 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    user: root
-    volumes:
-      - ./entrypoint.sh:/entrypoint_custom.sh
-    entrypoint: /entrypoint_custom.sh
-
 volumes:
   postgres_data:
+    use_external: true
